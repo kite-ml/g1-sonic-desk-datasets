@@ -61,6 +61,13 @@ The policy is [nvidia/GR00T-N1.7-3B](https://huggingface.co/nvidia/GR00T-N1.7-3B
   <img alt="Placed in the training layout by checkpoint: 36 of 50 at 2,500 steps, 24 of 50 at 5,000, 49 of 50 at 10,000 and 15,000, and 190 of 200 at 20,000" src="docs/placed_by_checkpoint_light.svg">
 </picture>
 
+checkpoint-5000, the dip in the chart:
+
+| | | |
+| :---: | :---: | :---: |
+| ![checkpoint-5000, episode 0, head camera](policy/gifs/checkpoint_5000_head_0.gif) | ![checkpoint-5000, episode 1, head camera](policy/gifs/checkpoint_5000_head_1.gif) | ![checkpoint-5000, episode 0, whole scene](policy/gifs/checkpoint_5000_orbit_0.gif) |
+| Episode 0: pushes the apple, never lifts it | Episode 1: placed | Episode 0, whole scene |
+
 ## Evaluation
 
 [Kite](https://kiteml.com) ran the policy closed-loop on the desk twin: the G1 under SONIC v1.1 in MuJoCo, seen through the robot's head camera.
@@ -86,6 +93,31 @@ The policy is [nvidia/GR00T-N1.7-3B](https://huggingface.co/nvidia/GR00T-N1.7-3B
 | 15,000 | 49/50 (98%, 90–100%) | 0 |
 | 20,000 | 190/200 (95%, 91–97%) | 0 |
 
+checkpoint-20000, head camera, episodes 0 to 3, all placed:
+
+| | |
+| :---: | :---: |
+| ![Episode 0, placed](policy/gifs/in_distribution_head_ok_0.gif) | ![Episode 1, placed](policy/gifs/in_distribution_head_ok_1.gif) |
+| ![Episode 2, placed](policy/gifs/in_distribution_head_ok_2.gif) | ![Episode 3, placed](policy/gifs/in_distribution_head_ok_3.gif) |
+
+6 of the 10 failures. 3 lift the apple and lose it, 3 never grip it. None is a fall.
+
+| | | |
+| :---: | :---: | :---: |
+| ![Episode 17](policy/gifs/in_distribution_head_fail_17.gif) | ![Episode 55](policy/gifs/in_distribution_head_fail_55.gif) | ![Episode 85](policy/gifs/in_distribution_head_fail_85.gif) |
+| Episode 17: lifts, loses it on the way to the plate | Episode 55: lifts, loses it out of view | Episode 85: drops it past the plate |
+| ![Episode 52](policy/gifs/in_distribution_head_fail_52.gif) | ![Episode 57](policy/gifs/in_distribution_head_fail_57.gif) | ![Episode 70](policy/gifs/in_distribution_head_fail_70.gif) |
+| Episode 52: knocks it away closing the hand | Episode 57: bumps it along the desk, no grip | Episode 70: pushes it off the desk |
+
+Whole scene, replayed from the saved simulator state:
+
+| | | |
+| :---: | :---: | :---: |
+| ![Episode 0, whole scene](policy/gifs/in_distribution_orbit_ok_0.gif) | ![Episode 1, whole scene](policy/gifs/in_distribution_orbit_ok_1.gif) | ![Episode 17, whole scene](policy/gifs/in_distribution_orbit_fail_17.gif) |
+| Episode 0: placed | Episode 1: placed | Episode 17: released at the plate's rim, rolls off the desk |
+| ![Episode 85, whole scene](policy/gifs/in_distribution_orbit_fail_85.gif) | ![Episode 52, whole scene](policy/gifs/in_distribution_orbit_fail_52.gif) | |
+| Episode 85: dropped behind the plate | Episode 52: knocked away | |
+
 ### Held-out layout
 
 The apple and plate sit 12 cm to the robot's left, outside the ±8 cm the training data covered, on new episodes that played no part in any choice. This is the figure to quote, because the training data and the training-layout test come from the same desk twin.
@@ -96,12 +128,10 @@ The apple and plate sit 12 cm to the robot's left, outside the ±8 cm the traini
 
 Of the 31 misses, the hand knocks the apple away before the grasp in 23. The rest: no grip 2, missed the plate 2, placed but not held 2, dropped in transit 1, still held at the end 1. At the new positions, the approach the policy learned clips the apple. More varied apple positions in training is the obvious next step.
 
-| | |
-| :---: | :---: |
-| ![A held-out success, overview camera](policy/gifs/heldout_success_overview.gif) | ![A held-out failure: the hand knocks the apple away](policy/gifs/heldout_knocked_away_overview.gif) |
-| Held-out layout, placed | Held-out layout, the hand knocks the apple away before the grasp |
-| ![A training-layout success, panning camera](policy/gifs/in_distribution_orbit_ok_0.gif) | ![A training-layout failure: released at the plate's rim, the apple rolls off](policy/gifs/in_distribution_orbit_fail_17.gif) |
-| Training layout, placed | Training layout, released at the plate's rim, rolls off the desk |
+| | | |
+| :---: | :---: | :---: |
+| ![A held-out success](policy/gifs/heldout_success_overview.gif) | ![A held-out failure](policy/gifs/heldout_knocked_away_overview.gif) | ![A second held-out failure](policy/gifs/heldout_knocked_away_overview_2.gif) |
+| Placed | Knocked away before the grasp | Knocked away before the grasp |
 
 ### Conditions
 
@@ -118,6 +148,15 @@ Of the 31 misses, the hand knocks the apple away before the grasp in 23. The res
 | reworded instruction | 96 | | | |
 
 No condition so far moves the policy by more than 6 points, and nothing fell. The vision conditions ran with the twin's first contact model, the dynamics ones with the corrected one below.
+
+Lighting, head camera, on the apple and plate positions of baseline episodes 0 and 1:
+
+| | |
+| :---: | :---: |
+| ![Low light, episode 0](policy/gifs/condition_low_light_0.gif) | ![Low light, episode 1](policy/gifs/condition_low_light_1.gif) |
+| Low light, episode 0: placed | Low light, episode 1: placed |
+| ![Side light, episode 0](policy/gifs/condition_side_light_0.gif) | ![Side light, episode 1](policy/gifs/condition_side_light_1.gif) |
+| Side light, episode 0: placed | Side light, episode 1: placed |
 
 ### The apple's contacts
 
