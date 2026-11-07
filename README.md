@@ -39,6 +39,17 @@ Training uses the `unitree_g1_sonic` modality in Isaac-GR00T:
 python gr00t/experiment/launch_finetune.py --base-model-path nvidia/GR00T-N1.7-3B --dataset-path <dataset> --embodiment-tag UNITREE_G1_SONIC --modality-config-path gr00t/configs/data/embodiment_configs.py
 ```
 
+## A policy trained and evaluated on the desk
+
+[`kiteml/gr00t-n1.7-g1-sonic-desk-apple`](https://huggingface.co/kiteml/gr00t-n1.7-g1-sonic-desk-apple) (private to
+kiteml) is GR00T N1.7 fine-tuned for `UNITREE_G1_SONIC` on the desk. In Kite's closed-loop evaluation it places the
+apple in **95%** of episodes in the layout it trained on (190/200), and **69%** when the apple and plate move 12 cm
+outside it (69/100; most failures knock the apple away before the grasp). It stays at 92–100% under light, camera,
+clutter, noise, mass, friction and servo conditions, and it never fell. [`policy/`](policy/) has the results and GIFs of
+successes and failures.
+
+![Held-out success](policy/gifs/heldout_success_overview.gif)
+
 ## Limits
 
 - Only the G1, the original apple and the plate are simulated physically. The moved and added desk items, and the other apples in `types`, are visual only.

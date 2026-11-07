@@ -1,0 +1,246 @@
+episode    0: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode    1: replay diff 0.0e+00; worst torque 92% of URDF, worst speed 54% of URDF
+episode    2: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode    3: replay diff 0.0e+00; worst torque 94% of URDF, worst speed 54% of URDF
+episode    4: replay diff 0.0e+00; worst torque 90% of URDF, worst speed 54% of URDF
+episode    5: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode    6: replay diff 0.0e+00; worst torque 96% of URDF, worst speed 54% of URDF
+episode    7: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode    8: replay diff 0.0e+00; worst torque 100% of URDF, worst speed 54% of URDF
+episode    9: replay diff 0.0e+00; worst torque 92% of URDF, worst speed 54% of URDF
+episode   10: replay diff 0.0e+00; worst torque 91% of URDF, worst speed 54% of URDF
+episode   11: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode   12: replay diff 0.0e+00; worst torque 86% of URDF, worst speed 54% of URDF
+episode   13: replay diff 0.0e+00; worst torque 84% of URDF, worst speed 49% of URDF
+episode   14: replay diff 0.0e+00; worst torque 91% of URDF, worst speed 54% of URDF
+episode   15: replay diff 0.0e+00; worst torque 91% of URDF, worst speed 54% of URDF
+episode   16: replay diff 0.0e+00; worst torque 80% of URDF, worst speed 54% of URDF
+episode   17: replay diff 0.0e+00; worst torque 88% of URDF, worst speed 55% of URDF
+episode   18: replay diff 0.0e+00; worst torque 91% of URDF, worst speed 53% of URDF
+episode   19: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 54% of URDF
+episode   20: replay diff 0.0e+00; worst torque 86% of URDF, worst speed 53% of URDF
+episode   21: replay diff 0.0e+00; worst torque 87% of URDF, worst speed 54% of URDF
+episode   22: replay diff 0.0e+00; worst torque 94% of URDF, worst speed 54% of URDF
+episode   23: replay diff 0.0e+00; worst torque 100% of URDF, worst speed 54% of URDF
+episode   24: replay diff 0.0e+00; worst torque 93% of URDF, worst speed 53% of URDF
+episode   25: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   26: replay diff 0.0e+00; worst torque 93% of URDF, worst speed 54% of URDF
+episode   27: replay diff 0.0e+00; worst torque 93% of URDF, worst speed 53% of URDF
+episode   28: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 54% of URDF
+episode   29: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   30: replay diff 0.0e+00; worst torque 92% of URDF, worst speed 54% of URDF
+episode   31: replay diff 0.0e+00; worst torque 95% of URDF, worst speed 54% of URDF
+episode   32: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   33: replay diff 0.0e+00; worst torque 90% of URDF, worst speed 54% of URDF
+episode   34: replay diff 0.0e+00; worst torque 80% of URDF, worst speed 53% of URDF
+episode   35: replay diff 0.0e+00; worst torque 90% of URDF, worst speed 54% of URDF
+episode   36: replay diff 0.0e+00; worst torque 80% of URDF, worst speed 51% of URDF
+episode   37: replay diff 0.0e+00; worst torque 80% of URDF, worst speed 54% of URDF
+episode   38: replay diff 0.0e+00; worst torque 93% of URDF, worst speed 54% of URDF
+episode   39: replay diff 0.0e+00; worst torque 80% of URDF, worst speed 53% of URDF
+episode   40: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 54% of URDF
+episode   41: replay diff 0.0e+00; worst torque 90% of URDF, worst speed 54% of URDF
+episode   42: replay diff 0.0e+00; worst torque 84% of URDF, worst speed 54% of URDF
+episode   43: replay diff 0.0e+00; worst torque 91% of URDF, worst speed 54% of URDF
+episode   44: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   45: replay diff 0.0e+00; worst torque 85% of URDF, worst speed 54% of URDF
+episode   46: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 53% of URDF
+episode   47: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   48: replay diff 0.0e+00; worst torque 94% of URDF, worst speed 54% of URDF
+episode   49: replay diff 0.0e+00; worst torque 90% of URDF, worst speed 54% of URDF
+episode   50: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   51: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   52: replay diff 0.0e+00; worst torque 91% of URDF, worst speed 55% of URDF
+episode   53: replay diff 0.0e+00; worst torque 86% of URDF, worst speed 54% of URDF
+episode   54: replay diff 0.0e+00; worst torque 90% of URDF, worst speed 51% of URDF
+episode   55: replay diff 0.0e+00; worst torque 91% of URDF, worst speed 54% of URDF
+episode   56: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode   57: replay diff 0.0e+00; worst torque 89% of URDF, worst speed 55% of URDF
+episode   58: replay diff 0.0e+00; worst torque 100% of URDF, worst speed 54% of URDF
+episode   59: replay diff 0.0e+00; worst torque 89% of URDF, worst speed 50% of URDF
+episode   60: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode   61: replay diff 0.0e+00; worst torque 84% of URDF, worst speed 54% of URDF
+episode   62: replay diff 0.0e+00; worst torque 90% of URDF, worst speed 54% of URDF
+episode   63: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   64: replay diff 0.0e+00; worst torque 79% of URDF, worst speed 50% of URDF
+episode   65: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode   66: replay diff 0.0e+00; worst torque 97% of URDF, worst speed 54% of URDF
+episode   67: replay diff 0.0e+00; worst torque 86% of URDF, worst speed 54% of URDF
+episode   68: replay diff 0.0e+00; worst torque 95% of URDF, worst speed 54% of URDF
+episode   69: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 54% of URDF
+episode   70: replay diff 0.0e+00; worst torque 99% of URDF, worst speed 56% of URDF
+episode   71: replay diff 0.0e+00; worst torque 94% of URDF, worst speed 54% of URDF
+episode   72: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 52% of URDF
+episode   73: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 52% of URDF
+episode   74: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   75: replay diff 0.0e+00; worst torque 88% of URDF, worst speed 54% of URDF
+episode   76: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode   77: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 54% of URDF
+episode   78: replay diff 0.0e+00; worst torque 99% of URDF, worst speed 51% of URDF
+episode   79: replay diff 0.0e+00; worst torque 94% of URDF, worst speed 53% of URDF
+episode   80: replay diff 0.0e+00; worst torque 86% of URDF, worst speed 49% of URDF
+episode   81: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   82: replay diff 0.0e+00; worst torque 99% of URDF, worst speed 54% of URDF
+episode   83: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   84: replay diff 0.0e+00; worst torque 92% of URDF, worst speed 54% of URDF
+episode   85: replay diff 0.0e+00; worst torque 98% of URDF, worst speed 54% of URDF
+episode   86: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   87: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   88: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode   89: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   90: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 53% of URDF
+episode   91: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode   92: replay diff 0.0e+00; worst torque 92% of URDF, worst speed 53% of URDF
+episode   93: replay diff 0.0e+00; worst torque 87% of URDF, worst speed 54% of URDF
+episode   94: replay diff 0.0e+00; worst torque 88% of URDF, worst speed 53% of URDF
+episode   95: replay diff 0.0e+00; worst torque 84% of URDF, worst speed 53% of URDF
+episode   96: replay diff 0.0e+00; worst torque 84% of URDF, worst speed 54% of URDF
+episode   97: replay diff 0.0e+00; worst torque 98% of URDF, worst speed 54% of URDF
+episode   98: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 51% of URDF
+episode   99: replay diff 0.0e+00; worst torque 88% of URDF, worst speed 54% of URDF
+episode  100: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  101: replay diff 0.0e+00; worst torque 100% of URDF, worst speed 54% of URDF
+episode  102: replay diff 0.0e+00; worst torque 92% of URDF, worst speed 54% of URDF
+episode  103: replay diff 0.0e+00; worst torque 87% of URDF, worst speed 54% of URDF
+episode  104: replay diff 0.0e+00; worst torque 92% of URDF, worst speed 54% of URDF
+episode  105: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  106: replay diff 0.0e+00; worst torque 92% of URDF, worst speed 54% of URDF
+episode  107: replay diff 0.0e+00; worst torque 94% of URDF, worst speed 54% of URDF
+episode  108: replay diff 0.0e+00; worst torque 93% of URDF, worst speed 54% of URDF
+episode  109: replay diff 0.0e+00; worst torque 94% of URDF, worst speed 54% of URDF
+episode  110: replay diff 0.0e+00; worst torque 98% of URDF, worst speed 54% of URDF
+episode  111: replay diff 0.0e+00; worst torque 98% of URDF, worst speed 54% of URDF
+episode  112: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  113: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 53% of URDF
+episode  114: replay diff 0.0e+00; worst torque 80% of URDF, worst speed 54% of URDF
+episode  115: replay diff 0.0e+00; worst torque 79% of URDF, worst speed 50% of URDF
+episode  116: replay diff 0.0e+00; worst torque 90% of URDF, worst speed 54% of URDF
+episode  117: replay diff 0.0e+00; worst torque 92% of URDF, worst speed 54% of URDF
+episode  118: replay diff 0.0e+00; worst torque 94% of URDF, worst speed 54% of URDF
+episode  119: replay diff 0.0e+00; worst torque 80% of URDF, worst speed 50% of URDF
+episode  120: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 53% of URDF
+episode  121: replay diff 0.0e+00; worst torque 93% of URDF, worst speed 54% of URDF
+episode  122: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode  123: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 55% of URDF
+episode  124: replay diff 0.0e+00; worst torque 94% of URDF, worst speed 53% of URDF
+episode  125: replay diff 0.0e+00; worst torque 88% of URDF, worst speed 54% of URDF
+episode  126: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode  127: replay diff 0.0e+00; worst torque 97% of URDF, worst speed 51% of URDF
+episode  128: replay diff 0.0e+00; worst torque 84% of URDF, worst speed 54% of URDF
+episode  129: replay diff 0.0e+00; worst torque 90% of URDF, worst speed 54% of URDF
+episode  130: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 53% of URDF
+episode  131: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  132: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  133: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  134: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode  135: replay diff 0.0e+00; worst torque 97% of URDF, worst speed 54% of URDF
+episode  136: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode  137: replay diff 0.0e+00; worst torque 100% of URDF, worst speed 54% of URDF
+episode  138: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  139: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  140: replay diff 0.0e+00; worst torque 84% of URDF, worst speed 51% of URDF
+episode  141: replay diff 0.0e+00; worst torque 97% of URDF, worst speed 54% of URDF
+episode  142: replay diff 0.0e+00; worst torque 91% of URDF, worst speed 54% of URDF
+episode  143: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  144: replay diff 0.0e+00; worst torque 85% of URDF, worst speed 52% of URDF
+episode  145: replay diff 0.0e+00; worst torque 85% of URDF, worst speed 53% of URDF
+episode  146: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  147: replay diff 0.0e+00; worst torque 95% of URDF, worst speed 54% of URDF
+episode  148: replay diff 0.0e+00; worst torque 87% of URDF, worst speed 51% of URDF
+episode  149: replay diff 0.0e+00; worst torque 93% of URDF, worst speed 54% of URDF
+episode  150: replay diff 0.0e+00; worst torque 89% of URDF, worst speed 53% of URDF
+episode  151: replay diff 0.0e+00; worst torque 94% of URDF, worst speed 55% of URDF
+episode  152: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 54% of URDF
+episode  153: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  154: replay diff 0.0e+00; worst torque 85% of URDF, worst speed 54% of URDF
+episode  155: replay diff 0.0e+00; worst torque 97% of URDF, worst speed 54% of URDF
+episode  156: replay diff 0.0e+00; worst torque 97% of URDF, worst speed 54% of URDF
+episode  157: replay diff 0.0e+00; worst torque 92% of URDF, worst speed 54% of URDF
+episode  158: replay diff 0.0e+00; worst torque 97% of URDF, worst speed 54% of URDF
+episode  159: replay diff 0.0e+00; worst torque 87% of URDF, worst speed 54% of URDF
+episode  160: replay diff 0.0e+00; worst torque 89% of URDF, worst speed 54% of URDF
+episode  161: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  162: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  163: replay diff 0.0e+00; worst torque 97% of URDF, worst speed 54% of URDF
+episode  164: replay diff 0.0e+00; worst torque 89% of URDF, worst speed 54% of URDF
+episode  165: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  166: replay diff 0.0e+00; worst torque 88% of URDF, worst speed 54% of URDF
+episode  167: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  168: replay diff 0.0e+00; worst torque 80% of URDF, worst speed 53% of URDF
+episode  169: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode  170: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  171: replay diff 0.0e+00; worst torque 90% of URDF, worst speed 51% of URDF
+episode  172: replay diff 0.0e+00; worst torque 87% of URDF, worst speed 53% of URDF
+episode  173: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  174: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  175: replay diff 0.0e+00; worst torque 85% of URDF, worst speed 54% of URDF
+episode  176: replay diff 0.0e+00; worst torque 89% of URDF, worst speed 53% of URDF
+episode  177: replay diff 0.0e+00; worst torque 92% of URDF, worst speed 53% of URDF
+episode  178: replay diff 0.0e+00; worst torque 94% of URDF, worst speed 54% of URDF
+episode  179: replay diff 0.0e+00; worst torque 80% of URDF, worst speed 53% of URDF
+episode  180: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  181: replay diff 0.0e+00; worst torque 97% of URDF, worst speed 53% of URDF
+episode  182: replay diff 0.0e+00; worst torque 92% of URDF, worst speed 54% of URDF
+episode  183: replay diff 0.0e+00; worst torque 81% of URDF, worst speed 51% of URDF
+episode  184: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  185: replay diff 0.0e+00; worst torque 92% of URDF, worst speed 54% of URDF
+episode  186: replay diff 0.0e+00; worst torque 100% of URDF, worst speed 53% of URDF
+episode  187: replay diff 0.0e+00; worst torque 89% of URDF, worst speed 54% of URDF
+episode  188: replay diff 0.0e+00; worst torque 80% of URDF, worst speed 50% of URDF
+episode  189: replay diff 0.0e+00; worst torque 100% of URDF, worst speed 54% of URDF
+episode  190: replay diff 0.0e+00; worst torque 94% of URDF, worst speed 54% of URDF
+episode  191: replay diff 0.0e+00; worst torque 97% of URDF, worst speed 55% of URDF
+episode  192: replay diff 0.0e+00; worst torque 83% of URDF, worst speed 54% of URDF
+episode  193: replay diff 0.0e+00; worst torque 97% of URDF, worst speed 53% of URDF
+episode  194: replay diff 0.0e+00; worst torque 86% of URDF, worst speed 54% of URDF
+episode  195: replay diff 0.0e+00; worst torque 89% of URDF, worst speed 52% of URDF
+episode  196: replay diff 0.0e+00; worst torque 82% of URDF, worst speed 54% of URDF
+episode  197: replay diff 0.0e+00; worst torque 97% of URDF, worst speed 53% of URDF
+episode  198: replay diff 0.0e+00; worst torque 94% of URDF, worst speed 54% of URDF
+episode  199: replay diff 0.0e+00; worst torque 95% of URDF, worst speed 54% of URDF
+
+200 episodes; replay max qpos diff 0.0e+00
+joint                         peak N m  of URDF  clamp  at clamp  eps speed/URDF margin rad eps past
+left_hip_pitch_joint             31.20      35%   88.0     0.00%    0        10%      2.215        0
+left_hip_roll_joint              10.51       8%   88.0     0.00%    0         3%      0.414        0
+left_hip_yaw_joint                6.61       8%   88.0     0.00%    0         6%      2.637        0
+left_knee_joint                  18.04      13%  139.0     0.00%    0        11%      0.452        0
+left_ankle_pitch_joint           23.44      67%   25.0     0.00%    0         3%      0.508        0
+left_ankle_roll_joint             2.02       6%   25.0     0.00%    0         1%      0.210        0
+right_hip_pitch_joint            17.50      20%   88.0     0.00%    0         7%      2.195        0
+right_hip_roll_joint             11.53       8%   88.0     0.00%    0         4%      0.479        0
+right_hip_yaw_joint               7.12       8%   88.0     0.00%    0         6%      2.633        0
+right_knee_joint                 22.91      16%  139.0     0.00%    0        10%      0.466        0
+right_ankle_pitch_joint          13.25      38%   25.0     0.00%    0         3%      0.521        0
+right_ankle_roll_joint            1.89       5%   25.0     0.00%    0         1%      0.206        0
+waist_yaw_joint                  14.73      17%   88.0     0.00%    0         6%      2.541        0
+waist_roll_joint                 15.90      45%   25.0     0.00%    0         3%      0.491        0
+waist_pitch_joint                25.00      71%   25.0     0.01%    5         8%      0.427        0
+left_shoulder_pitch_joint        25.00     100%   25.0     0.00%    2        19%      1.890        0
+left_shoulder_roll_joint         19.45      78%   25.0     0.00%    0        12%      1.492        0
+left_shoulder_yaw_joint          16.21      65%   25.0     0.00%    0        15%      2.068        0
+left_elbow_joint                 23.99      96%   25.0     0.00%    0        27%      0.625        0
+left_wrist_roll_joint             7.17      29%   25.0     0.00%    0        20%      1.020        0
+left_wrist_pitch_joint            4.26      85%    5.0     0.00%    0        16%      0.562        0
+left_wrist_yaw_joint              4.38      88%    5.0     0.00%    0        19%      0.730        0
+left_hand_thumb_0_joint           0.10       4%    2.5     0.00%    0        25%      0.998        0
+left_hand_thumb_1_joint           1.15      82%    1.4     0.00%    0        34%      0.199        0
+left_hand_thumb_2_joint           1.00      71%    1.4     0.00%    0        34%     -0.001        0
+left_hand_middle_0_joint          0.96      68%    1.4     0.00%    0        28%     -0.007        0
+left_hand_middle_1_joint          1.40     100%    1.4     0.00%    9        55%     -0.008        0
+left_hand_index_0_joint           0.82      59%    1.4     0.00%    0        28%     -0.003        0
+left_hand_index_1_joint           1.28      91%    1.4     0.00%    0        56%     -0.008        0
+right_shoulder_pitch_joint       14.60      58%   25.0     0.00%    0        14%      2.243        0
+right_shoulder_roll_joint        10.73      43%   25.0     0.00%    0         5%      1.502        0
+right_shoulder_yaw_joint          5.58      22%   25.0     0.00%    0         6%      2.180        0
+right_elbow_joint                 5.42      22%   25.0     0.00%    0        18%      0.849        0
+right_wrist_roll_joint            4.20      17%   25.0     0.00%    0        10%      1.320        0
+right_wrist_pitch_joint           2.11      42%    5.0     0.00%    0        11%      0.933        0
+right_wrist_yaw_joint             1.81      36%    5.0     0.00%    0         8%      1.242        0
+right_hand_thumb_0_joint          0.00       0%    2.5     0.00%    0         0%      1.045        0
+right_hand_thumb_1_joint          0.01       1%    1.4     0.00%    0         0%      0.610        0
+right_hand_thumb_2_joint          0.00       0%    1.4     0.00%    0         0%     -0.000        0
+right_hand_middle_0_joint         0.10       7%    1.4     0.00%    0         5%     -0.004        0
+right_hand_middle_1_joint         0.01       1%    1.4     0.00%    0         1%     -0.001        0
+right_hand_index_0_joint          0.01       1%    1.4     0.00%    0         0%     -0.000        0
+right_hand_index_1_joint          0.00       0%    1.4     0.00%    0         0%     -0.000        0

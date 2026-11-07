@@ -1,0 +1,12 @@
+# Dynamics conditions for the desk: they change what the robot and the apple do, within what is physically plausible
+# for this robot and this object. Each runs 100 episodes against the baseline, with the same apple and plate positions.
+# Reference values in the desk twin: the apple weighs 0.15 kg with sliding friction 1.0, the desk 0.8.
+- {id: slippery_surfaces, physics: {friction_scale: [0.6, 0.9]}}      # a polished floor or a wiped desk, feet included
+- {id: light_apple, object: {mass_kg: [0.10, 0.13]}}                  # a small apple
+- {id: heavy_apple, object: {mass_kg: [0.20, 0.25]}}                  # a large one: about the heaviest common apple
+- {id: waxy_apple, object: {friction: [0.4, 0.6]}}                    # a waxed skin against the fingertips
+- {id: weak_servos, physics: {gain_scale: [0.85, 0.95]}}              # motor-to-motor spread, a warm motor's derating
+- {id: stiff_servos, physics: {gain_scale: [1.05, 1.15]}}
+- {id: joint_damping, physics: {damping_scale: [1.2, 2.0]}}           # cold or worn joints
+- {id: actuation_delay_5_15ms, physics: {actuation_delay_ms: [5, 15]}}   # bus and driver latency on top of the 50 Hz loop
+- {id: actuation_delay_15_30ms, physics: {actuation_delay_ms: [15, 30]}} # a loaded system: the plausible worst case
