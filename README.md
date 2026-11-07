@@ -120,13 +120,13 @@ Whole scene, replayed from the saved simulator state:
 
 ### Held-out layout
 
-The apple and plate sit 12 cm to the robot's left, outside the ±8 cm the training data covered, on new episodes that played no part in any choice. This is the figure to quote, because the training data and the training-layout test come from the same desk twin.
+The apple and plate sit 12 cm to the robot's left, outside the ±8 cm the training data covered.
 
 | | Placed (95% interval) | Fell |
 | --- | --- | --- |
 | checkpoint-20000 | 69/100 (69%, 59–77%) | 0 |
 
-Of the 31 misses, the hand knocks the apple away before the grasp in 23. The rest: no grip 2, missed the plate 2, placed but not held 2, dropped in transit 1, still held at the end 1. At the new positions, the approach the policy learned clips the apple. More varied apple positions in training is the obvious next step.
+Misses: knocked away before the grasp 23, no grip 2, missed the plate 2, placed but not held 2, dropped in transit 1, still held at the end 1.
 
 | | | |
 | :---: | :---: | :---: |
@@ -147,7 +147,7 @@ Of the 31 misses, the hand knocks the apple away before the grasp in 23. The res
 | state noise (σ 0.02) | 96 | | weaker and stiffer servos, joint damping, 5–30 ms motor delay | running |
 | reworded instruction | 96 | | | |
 
-No condition so far moves the policy by more than 6 points, and nothing fell. The vision conditions ran with the twin's first contact model, the dynamics ones with the corrected one below.
+No condition so far moves the policy by more than 6 points, and nothing fell.
 
 Lighting, head camera, on the apple and plate positions of baseline episodes 0 and 1:
 
@@ -158,20 +158,6 @@ Lighting, head camera, on the apple and plate positions of baseline episodes 0 a
 | ![Side light, episode 0](policy/gifs/condition_side_light_0.gif) | ![Side light, episode 1](policy/gifs/condition_side_light_1.gif) |
 | Side light, episode 0: placed | Side light, episode 1: placed |
 
-### The apple's contacts
-
-The desk twin first used MuJoCo's default contacts (pyramidal friction cones, impratio 1). Under them, a firmly squeezed apple slides out of a grip, and a dropped one rolls about 25 cm. This may be why the datasets note that the apple lands harder and rolls further than in NVIDIA's demos (see Limits). With elliptic cones and impratio 10, as MuJoCo recommends for grasping, the same policy places 99/100 against 96/100 on the same episodes. That difference is not significant (5 discordant episodes, exact McNemar p = 0.375), so the policy does not depend on the slippery contacts.
-
-### Within the G1's limits
-
-Recorded commands were replayed exactly, and every motor was checked at every 5 ms physics step against Unitree's G1 URDF ([`policy/results/limits/`](policy/results/limits/), 200 episodes). No joint leaves its range, and joint speeds stay under 56% of rated. Torque briefly reaches the limit in a few episodes, for milliseconds at a time:
-
-- the left shoulder pitch touches its 25 N·m rating in 2 of 200 episodes, and the left elbow peaks at 24 of 25 N·m;
-- the waist pitch touches the simulator's 25 N·m clamp in 5 episodes, below Unitree's 35 N·m rating;
-- the left middle finger reaches its 1.4 N·m in 9 episodes while squeezing the apple.
-
-Nothing exceeds a rating, because the simulator clamps at it. But the left arm's fast reach runs those motors at their limit for an instant, at the speed of NVIDIA's teleoperated demos (wrist peak about 1 m/s). A real deployment should rate-limit the arm, which would also lower those peaks.
-
 All the numbers in this section are in [`policy/results/SUMMARY.md`](policy/results/SUMMARY.md) and [`policy/results/summary.json`](policy/results/summary.json).
 
 ## Limits
@@ -181,6 +167,7 @@ All the numbers in this section are in [`policy/results/SUMMARY.md`](policy/resu
 - The apple lands harder and rolls further than in NVIDIA's demos, and in some episodes it's still rolling when the episode ends. `meta/provenance.json` lists each episode's `apple_fall_cm`, `apple_roll_cm` and `apple_end_speed_cm_s`, so you can filter on them.
 - The body sways more than in NVIDIA's demos, because SONIC balances the robot itself: the pelvis moves about 3.7 cm over a typical `baseline` episode, against 0.4 cm in NVIDIA's demos, and the head camera moves with it.
 - The policy was trained on its own 824-episode set from this desk, not on the eight datasets, and evaluated with the simulator's renderer rather than the datasets' look.
+- Torque briefly reaches the left shoulder pitch's rating in 2 of 200 episodes. The arm should be rate-limited on a real robot. Full audit in [`policy/results/limits/`](policy/results/limits/).
 - Four dynamics conditions are still running. This report will be updated when they finish.
 
 ## Credits
