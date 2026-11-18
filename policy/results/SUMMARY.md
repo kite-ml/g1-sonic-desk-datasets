@@ -37,10 +37,17 @@
 
 ## Dynamics conditions (grasping contacts), 100 episodes each, paired with the baseline
 
+The complete ten-cell sweep. – means the failure types were not published.
+
 | Run | Placed (95% CI) | Fell | Failure types |
 |---|---|---|---|
 | baseline | 99/100 (99%, 95–100%) | 0 | knocked away 1 |
-| heavy_apple | 100/100 (100%, 96–100%) | 0 | none |
-| light_apple | 99/100 (99%, 95–100%) | 0 | missed plate 1 |
-| slippery_surfaces | 99/100 (99%, 95–100%) | 0 | missed plate 1 |
+| actuation_delay_15_30ms | 93/100 (93%, 86–97%) | 0 | – |
+| actuation_delay_5_15ms | 98/100 (98%, 93–99%) | 0 | – |
+| heavy_apple | 99/100 (99%, 95–100%) | 0 | – |
+| joint_damping | 98/100 (98%, 93–99%) | 0 | – |
+| light_apple | 100/100 (100%, 96–100%) | 0 | none |
+| slippery_surfaces | 100/100 (100%, 96–100%) | 0 | none |
+| stiff_servos | 99/100 (99%, 95–100%) | 0 | – |
 | waxy_apple | 99/100 (99%, 95–100%) | 0 | missed plate 1 |
+| weak_servos | 94/100 (94%, 88–97%) | 0 | – |

@@ -11,7 +11,8 @@ A Unitree G1 picks up an apple and places it on a plate, on a simulated copy of 
 | Training layout | 190 of 200 placed (95%) |
 | Apple and plate 12 cm outside the training layout | 69 of 100 placed (69%) |
 | Light, camera, clutter, noise and instruction changes | 92 to 96 of 100 placed, against 98 for the baseline |
-| Apple mass, friction and surface changes | 99 to 100 of 100 placed, against 99 for the baseline |
+| Apple mass and friction, surface, motor and delay changes | 93 to 100 of 100 placed, against 99 for the baseline |
+| Policy answering 1.5×, 2× and 3× slower (added latency) | 66, 69 and 0 of 100 placed, against 99 for the baseline |
 | Falls | none in any test |
 
 ## Datasets
@@ -80,7 +81,7 @@ checkpoint-5000, the dip in the chart:
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/placed_by_test_dark.svg">
-  <img alt="Placed by test: 190 of 200 in the training layout, 69 of 100 in the held-out layout, 92 to 96 of 100 under vision conditions against a baseline of 98, and 99 to 100 under dynamics conditions against a baseline of 99" src="docs/placed_by_test_light.svg">
+  <img alt="Placed by test: 190 of 200 in the training layout, 69 of 100 in the held-out layout, 92 to 96 of 100 under vision conditions against a baseline of 98, 93 to 100 of 100 under dynamics conditions against a baseline of 99, and 66, 69 and 0 of 100 with the policy answering 1.5, 2 and 3 times slower" src="docs/placed_by_test_light.svg">
 </picture>
 
 ### Training layout
@@ -133,23 +134,55 @@ Misses: knocked away before the grasp 23, no grip 2, missed the plate 2, placed 
 | ![A held-out success](policy/gifs/heldout_success_overview.gif) | ![A held-out failure](policy/gifs/heldout_knocked_away_overview.gif) | ![A second held-out failure](policy/gifs/heldout_knocked_away_overview_2.gif) |
 | Placed | Knocked away before the grasp | Knocked away before the grasp |
 
-### Conditions
+### Stress tests
 
-100 episodes each, paired with the baseline. The condition ranges are in [`policy/results/conditions_vision/conditions.yaml`](policy/results/conditions_vision/conditions.yaml) and [`policy/results/conditions_dynamics/conditions.yaml`](policy/results/conditions_dynamics/conditions.yaml).
+Kite changes one thing at a time and runs the policy 100 times from the same apple and plate positions as its baseline. The vision and dynamics ranges are in [`policy/results/conditions_vision/conditions.yaml`](policy/results/conditions_vision/conditions.yaml) and [`policy/results/conditions_dynamics/conditions.yaml`](policy/results/conditions_dynamics/conditions.yaml). Each clip below is one real try, at 2× speed; the label names the change and the condition's score. All of them in one video: [`policy/stress_tests_grid.mp4`](policy/stress_tests_grid.mp4).
 
-| Vision | Placed | | Dynamics, within real variation | Placed |
+<table>
+<tr><td align="center"><img src="policy/gifs/conditions/baseline.gif" width="240"><br><sub>Baseline · 99/100</sub></td><td align="center"><img src="policy/gifs/conditions/light_apple.gif" width="240"><br><sub>Lighter apple · 100/100</sub></td><td align="center"><img src="policy/gifs/conditions/heavy_apple.gif" width="240"><br><sub>Heavier apple · 99/100</sub></td><td align="center"><img src="policy/gifs/conditions/slippery.gif" width="240"><br><sub>Slippery surfaces · 100/100</sub></td></tr>
+<tr><td align="center"><img src="policy/gifs/conditions/weak_motors.gif" width="240"><br><sub>Weaker motors · 94/100</sub></td><td align="center"><img src="policy/gifs/conditions/strong_motors.gif" width="240"><br><sub>Stronger motors · 99/100</sub></td><td align="center"><img src="policy/gifs/conditions/motor_delay.gif" width="240"><br><sub>Controller delay 15–30 ms · 93/100</sub></td><td align="center"><img src="policy/gifs/conditions/dim_light.gif" width="240"><br><sub>Dim light · 94/100</sub></td></tr>
+<tr><td align="center"><img src="policy/gifs/conditions/model_2x_slower.gif" width="240"><br><sub>Model 2× slower · 69/100</sub></td><td align="center"><img src="policy/gifs/conditions/model_3x_slower.gif" width="240"><br><sub>Model 3× slower · 0/100</sub></td><td align="center"><img src="policy/gifs/conditions/safety_normal.gif" width="240"><br><sub>Normal settings · 48/50</sub></td><td align="center"><img src="policy/gifs/conditions/safety_weak_spot.gif" width="240"><br><sub>Search's weak spot · 41/50</sub></td></tr>
+</table>
+
+| Group | Change | Parameter and range | Placed / 100 | Baseline |
 | --- | --- | --- | --- | --- |
-| baseline | 98 | | baseline | 99 |
-| low light (35–60%) | 94 | | slippery surfaces (friction ×0.6–0.9) | 99 |
-| side light, shadows | 94 | | light apple (100–130 g) | 99 |
-| camera turned up to 4° | 93 | | heavy apple (200–250 g) | 100 |
-| clutter on the desk | 92 | | waxy apple (friction 0.4–0.6) | 99 |
-| state noise (σ 0.02) | 96 | | weaker and stiffer servos, joint damping, 5–30 ms motor delay | running |
-| reworded instruction | 96 | | | |
+| Vision | Low light | light intensity ×0.35–0.60 | 94 | 98 |
+| Vision | Side light, shadows | one low, hard side light | 94 | 98 |
+| Vision | Camera turned | head camera rotated up to ±4° | 93 | 98 |
+| Vision | Clutter | extra objects on the desk | 92 | 98 |
+| Vision | State noise | Gaussian noise on the robot state, σ 0.02 | 96 | 98 |
+| Vision | Reworded instruction | the task asked in other words | 96 | 98 |
+| Dynamics | Slippery surfaces | friction ×0.6–0.9 | 100 | 99 |
+| Dynamics | Lighter apple | mass 100–130 g (modelled 150 g) | 100 | 99 |
+| Dynamics | Heavier apple | mass 200–250 g | 99 | 99 |
+| Dynamics | Waxy apple | apple friction 0.4–0.6 | 99 | 99 |
+| Dynamics | Weaker motors | actuator gain ×0.85–0.95 | **94** | 99 |
+| Dynamics | Stronger motors | actuator gain ×1.05–1.15 | 99 | 99 |
+| Dynamics | Stiff joints | joint damping ×1.2–2.0 | 98 | 99 |
+| Dynamics | Controller delay | commands reach the motors 5–15 ms late | 98 | 99 |
+| Dynamics | Controller delay | 15–30 ms late | **93** | 99 |
+| Timing | Model 1.5× slower | policy answers in ~310 ms instead of ~205 ms (A100) | **66** | 99 |
+| Timing | Model 2× slower | ~410 ms | **69** | 99 |
+| Timing | Model 3× slower | ~615 ms | **0** | 99 |
+| Search | The weak spot Kite's search found | all dynamics at once: friction ×0.6–0.9, apple 100–175 g, apple friction 0.4–0.6, gain ×0.85–1.0, damping ×1.2–2.0, delay 5–30 ms | 41 / 50 | 48 / 50 |
 
-No condition so far moves the policy by more than 6 points, and nothing fell.
+The policy holds up to every single change in the world: no condition costs it more than 6 points, and it never fell. What breaks it is time. When the model answers 1.5× slower than the A100 serves it, success drops to about two thirds, and at 3× it never places the apple. The search's weak spot costs 7 of 50 on the same tries, a hint rather than a finding (exact McNemar p = 0.065).
 
-Lighting, head camera, on the apple and plate positions of baseline episodes 0 and 1:
+**Safety at the weak spot** (the same 50 tries per side, re-simulated with contact recording on):
+
+| Check | Normal | Weak spot |
+| --- | --- | --- |
+| Unwanted touches per try (median) | 1.5 | 8 |
+| Idle right hand bumped the desk | 12 / 50 | 39 / 50 |
+| Hardest press on anything, worst try | 49 N | 151 N |
+| Tries with a joint past its limit | 0 / 50 | 3 / 50 |
+| Tries where it hit itself | 0 / 50 | 1 / 50 |
+| Apple dropped | 0 / 50 | 1 / 50 |
+| Jerkiness (dimensionless, lower is smoother) | 18.8 | 18.8 |
+
+It still succeeds most of the time there, but it gets rougher: the idle hand rests on the desk and presses harder.
+
+More lighting clips, head camera, on the apple and plate positions of baseline episodes 0 and 1:
 
 | | |
 | :---: | :---: |
@@ -158,7 +191,7 @@ Lighting, head camera, on the apple and plate positions of baseline episodes 0 a
 | ![Side light, episode 0](policy/gifs/condition_side_light_0.gif) | ![Side light, episode 1](policy/gifs/condition_side_light_1.gif) |
 | Side light, episode 0: placed | Side light, episode 1: placed |
 
-All the numbers in this section are in [`policy/results/SUMMARY.md`](policy/results/SUMMARY.md) and [`policy/results/summary.json`](policy/results/summary.json).
+The vision and dynamics numbers, with 95% intervals, are in [`policy/results/SUMMARY.md`](policy/results/SUMMARY.md) and [`policy/results/summary.json`](policy/results/summary.json).
 
 ## Limits
 
@@ -168,7 +201,7 @@ All the numbers in this section are in [`policy/results/SUMMARY.md`](policy/resu
 - The body sways more than in NVIDIA's demos, because SONIC balances the robot itself: the pelvis moves about 3.7 cm over a typical `baseline` episode, against 0.4 cm in NVIDIA's demos, and the head camera moves with it.
 - The policy was trained on its own 824-episode set from this desk, not on the eight datasets, and evaluated with the simulator's renderer rather than the datasets' look.
 - Torque briefly reaches the left shoulder pitch's rating in 2 of 200 episodes. The arm should be rate-limited on a real robot. Full audit in [`policy/results/limits/`](policy/results/limits/).
-- Four dynamics conditions are still running. This report will be updated when they finish.
+- The slower-model results are synthetic: the extra latency is added on top of the ~205 ms the policy takes on an A100.
 
 ## Credits
 

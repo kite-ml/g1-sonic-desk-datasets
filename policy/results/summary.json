@@ -276,7 +276,67 @@
     "placed_not_held": 0
    }
   },
+  "actuation_delay_15_30ms": {
+   "placed": {
+    "k": 93,
+    "n": 100,
+    "lo": 0.8625048526092651,
+    "hi": 0.9656807389327273
+   },
+   "fell": {
+    "k": 0,
+    "n": 100,
+    "lo": 3.469446951953614e-18,
+    "hi": 0.03699349820698568
+   },
+   "failures": {}
+  },
+  "actuation_delay_5_15ms": {
+   "placed": {
+    "k": 98,
+    "n": 100,
+    "lo": 0.929988209271456,
+    "hi": 0.9944980324498376
+   },
+   "fell": {
+    "k": 0,
+    "n": 100,
+    "lo": 3.469446951953614e-18,
+    "hi": 0.03699349820698568
+   },
+   "failures": {}
+  },
   "heavy_apple": {
+   "placed": {
+    "k": 99,
+    "n": 100,
+    "lo": 0.9455138038212946,
+    "hi": 0.9982325679358593
+   },
+   "fell": {
+    "k": 0,
+    "n": 100,
+    "lo": 3.469446951953614e-18,
+    "hi": 0.03699349820698568
+   },
+   "failures": {}
+  },
+  "joint_damping": {
+   "placed": {
+    "k": 98,
+    "n": 100,
+    "lo": 0.929988209271456,
+    "hi": 0.9944980324498376
+   },
+   "fell": {
+    "k": 0,
+    "n": 100,
+    "lo": 3.469446951953614e-18,
+    "hi": 0.03699349820698568
+   },
+   "failures": {}
+  },
+  "light_apple": {
    "placed": {
     "k": 100,
     "n": 100,
@@ -298,12 +358,12 @@
     "placed_not_held": 0
    }
   },
-  "light_apple": {
+  "slippery_surfaces": {
    "placed": {
-    "k": 99,
+    "k": 100,
     "n": 100,
-    "lo": 0.9455138038212946,
-    "hi": 0.9982325679358593
+    "lo": 0.9630065017930143,
+    "hi": 1.0
    },
    "fell": {
     "k": 0,
@@ -315,12 +375,12 @@
     "no_grip": 0,
     "knocked_away": 0,
     "held_at_end": 0,
-    "missed_plate": 1,
+    "missed_plate": 0,
     "dropped_in_transit": 0,
     "placed_not_held": 0
    }
   },
-  "slippery_surfaces": {
+  "stiff_servos": {
    "placed": {
     "k": 99,
     "n": 100,
@@ -333,14 +393,7 @@
     "lo": 3.469446951953614e-18,
     "hi": 0.03699349820698568
    },
-   "failures": {
-    "no_grip": 0,
-    "knocked_away": 0,
-    "held_at_end": 0,
-    "missed_plate": 1,
-    "dropped_in_transit": 0,
-    "placed_not_held": 0
-   }
+   "failures": {}
   },
   "waxy_apple": {
    "placed": {
@@ -363,6 +416,21 @@
     "dropped_in_transit": 0,
     "placed_not_held": 0
    }
+  },
+  "weak_servos": {
+   "placed": {
+    "k": 94,
+    "n": 100,
+    "lo": 0.8752318455410406,
+    "hi": 0.9722138760368118
+   },
+   "fell": {
+    "k": 0,
+    "n": 100,
+    "lo": 3.469446951953614e-18,
+    "hi": 0.03699349820698568
+   },
+   "failures": {}
   }
  }
 }
